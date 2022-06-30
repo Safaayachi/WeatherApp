@@ -69,6 +69,7 @@ function showWeatherData(data){
   fifthDayMinTempElement.innerText=data.daily[5].temp.min;
   var currentWeatherIcon=data.current.weather[0].icon;
   var iconurl = "http://openweathermap.org/img/w/" + currentWeatherIcon + ".png";
+  console.log(iconurl);
   mainSectionIconElement.innerHTML=`<img class="main-section-icon" id="main-section-icon" src="${iconurl}" alt="weather-icon" />`
   
 
