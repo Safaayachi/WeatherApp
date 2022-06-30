@@ -41,7 +41,7 @@ const API_KEY = "3a61d03d191e00e1fa908edb1ff5d13c";
   })
 }
 
-
+getWeatherData();
 
 
 
