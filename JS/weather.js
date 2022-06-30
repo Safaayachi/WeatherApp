@@ -47,7 +47,8 @@ function showWeatherData(data){
   let weatherDesc = data.current.weather[0].description;
   let weatherIcon = data.current.weather[0].icon;
   let timezone = data.timezone;
-  console.log(sunrise);
+  temperatureElement.innerText=temp;
+  
 }
 
 
