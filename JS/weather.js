@@ -36,11 +36,18 @@ const API_KEY = "3a61d03d191e00e1fa908edb1ff5d13c";
     let { latitude, longitude } = success.coords;
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data =>{
     console.log(data)
+    showWeatherData(data);
     })
   })
 }
-
 getWeatherData();
 
+function showWeatherData(data){
+  let { sunrise, sunset, wind_speed, temp } = data.current;
+  let weatherDesc = data.current.weather[0].description;
+  let weatherIcon = data.current.weather[0].icon;
+  let timezone = data.timezone;
+  console.log(weatherDesc);
+}
 
 
