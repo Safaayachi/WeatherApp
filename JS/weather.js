@@ -1,5 +1,5 @@
 const locationElement = document.getElementById("location");
-const mainSectionIconElement = document.getElementById("main-section-icon");
+const mainSectionIconElement = document.getElementById("currentIcon");
 const temperatureElement = document.getElementById("temperature");
 const zoneElement = document.getElementById("zone");
 const descriptionElement = document.getElementById("description");
@@ -45,7 +45,6 @@ getWeatherData();
 function showWeatherData(data){
   let { sunrise, sunset, wind_speed, temp } = data.current;
   let weatherDesc = data.current.weather[0].description;
-  let weatherIcon = data.current.weather[0].icon;
   let timezone = data.timezone;
   temperatureElement.innerText=temp;
   zoneElement.innerText=timezone;
@@ -68,6 +67,10 @@ function showWeatherData(data){
   fifthDayWeatherElement.innerText=data.daily[5].weather[0].main;
   fifthDayMaxTempElement.innerText=data.daily[5].temp.max;
   fifthDayMinTempElement.innerText=data.daily[5].temp.min;
+  var currentWeatherIcon=data.current.weather[0].icon;
+  var iconurl = "http://openweathermap.org/img/w/" + currentWeatherIcon + ".png";
+  mainSectionIconElement.innerHTML=`<img class="main-section-icon" id="main-section-icon" src="${iconurl}" alt="weather-icon" />`
+  
 
 
 
