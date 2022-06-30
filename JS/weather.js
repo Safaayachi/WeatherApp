@@ -56,6 +56,18 @@ function showWeatherData(data){
   firstDayWeatherElement.innerText=data.daily[1].weather[0].main;
   firstDayMaxTempElement.innerText=data.daily[1].temp.max;
   firstDayMinTempElement.innerText=data.daily[1].temp.min;
+  secondDayWeatherElement.innerText=data.daily[2].weather[0].main;
+  secondDayMaxTempElement.innerText=data.daily[2].temp.max;
+  secondDayMinTempElement.innerText=data.daily[2].temp.min;
+  thirdDayWeatherElement.innerText=data.daily[3].weather[0].main;
+  thirdDayMaxTempElement.innerText=data.daily[3].temp.max;
+  thirdDayMinTempElement.innerText=data.daily[3].temp.min;
+  forthDayWeatherElement.innerText=data.daily[4].weather[0].main;
+  forthDayMaxTempElement.innerText=data.daily[4].temp.max;
+  forthDayMinTempElement.innerText=data.daily[4].temp.min;
+  fifthDayWeatherElement.innerText=data.daily[5].weather[0].main;
+  fifthDayMaxTempElement.innerText=data.daily[5].temp.max;
+  fifthDayMinTempElement.innerText=data.daily[5].temp.min;
 
 
 
