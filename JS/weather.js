@@ -50,7 +50,7 @@ const fifthDayMinTempElement = document.getElementById(
   "fifthDayMin-temperature"
 );
 const API_KEY = "3a61d03d191e00e1fa908edb1ff5d13c";
-getWeatherData();
+locationElement.addEventListener("click",getWeatherData());
 function getWeatherData() {
   navigator.geolocation.getCurrentPosition((success) => {
     console.log(success);
