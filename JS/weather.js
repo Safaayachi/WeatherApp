@@ -1,5 +1,5 @@
 const locationElement = document.getElementById("location");
-const mainSectionIconElement = document.getElementById("currentIcon");
+const mainSectionIconElement = document.getElementById("main-section-icon");
 const temperatureElement = document.getElementById("temperature");
 const zoneElement = document.getElementById("zone");
 const descriptionElement = document.getElementById("description");
@@ -70,8 +70,7 @@ function showWeatherData(data){
   var currentWeatherIcon=data.current.weather[0].icon;
   var iconurl = "http://openweathermap.org/img/w/" + currentWeatherIcon + ".png";
   console.log(iconurl);
-  $('#main-section-icon').attr('src', iconurl);
-  
+  mainSectionIconElement.src=iconurl;
 
 
 
