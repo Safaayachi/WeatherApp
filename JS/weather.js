@@ -31,22 +31,17 @@ const fifthDayMaxTempElement = document.getElementById("fifthDayMax-temperature"
 const fifthDayMinTempElement = document.getElementById("fifthDayMin-temperature");
 const API_KEY = "3a61d03d191e00e1fa908edb1ff5d13c";
 
- async function getWeatherData() {
+  function getWeatherData() {
     navigator.geolocation.getCurrentPosition((success) => {
-    console.log(success);
+    console.log
     let { latitude, longitude } = success.coords;
-    const res=  fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`);
-    return   res.json();
-      
-        
-        
-      });
-    };
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data =>{
+    cosole.log(data)
+    showWeatherData(data);
+    })
+  })
+}
 
-locationElement.addEventListener("click", async() => {
-    const data = await getWeatherData();
-    descriptionElement.innerText= data.current.weather[0].description;
-});
 
 
 
