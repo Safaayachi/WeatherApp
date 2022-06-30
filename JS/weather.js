@@ -48,7 +48,13 @@ function showWeatherData(data){
   let weatherIcon = data.current.weather[0].icon;
   let timezone = data.timezone;
   temperatureElement.innerText=temp;
-  
+  zoneElement.innerText=timezone;
+  descriptionElement.innerText=weatherDesc;
+  windElement.innerText=wind_speed;
+  sunriseTimeElement.innerText=sunrise;
+  sunsetTimeElement.innerText=sunset;
+
+
 }
 
 
