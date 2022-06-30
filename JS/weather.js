@@ -35,7 +35,7 @@ const API_KEY = "3a61d03d191e00e1fa908edb1ff5d13c";
     navigator.geolocation.getCurrentPosition((success) => {
     console.log(success);
     let { latitude, longitude } = success.coords;
-    const res= await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`);
+    const res=  fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`);
     return await  res.json();
       
         
