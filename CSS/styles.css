@@ -103,13 +103,11 @@ footer {
   color: #767676;
   font-size: 16px;
 }
-.max{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+#max-icon{
+  width:8px;
+  height:8px;
 }
-.min{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+#min-icon{
+  width:6px;
+  height:6px;
 }
