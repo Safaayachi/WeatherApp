@@ -46,7 +46,7 @@ function showWeatherData(data){
   temperatureElement.innerText=temp;
   zoneElement.innerText=timezone;
   descriptionElement.innerText=weatherDesc;
-  windElement.innerText=wind_speed;
+  windElement.innerText=`${wind_speed} km/h`;
   sunriseTimeElement.innerText=convertTime(sunrise);
   console.log(typeof sunrise);
   sunsetTimeElement.innerText=convertTime(sunset);
@@ -83,8 +83,7 @@ function showWeatherData(data){
   function convertTime(x){
     var hours =new Date(x*1000).getHours();
     var minutes =new Date(x*1000).getMinutes();
-    var seconds =new Date(x*1000).getSeconds();
-    var convertedTime=`${hours}:${minutes}:${seconds} pm`;
+    var convertedTime=`${hours}:${minutes} pm`;
     return convertedTime;
   }
 
