@@ -48,7 +48,7 @@ function showWeatherData(data){
   descriptionElement.innerText=weatherDesc;
   windElement.innerText=wind_speed;
   sunriseTimeElement.innerText=new Date(sunrise*1000).getHours();
-  sunsetTimeElement.innerText=sunset;
+  sunsetTimeElement.innerText=convertTime(sunset);
   console.log(typeof sunrise);
   firstDayWeatherElement.innerText=data.daily[1].weather[0].main;
   firstDayMaxTempElement.innerText=data.daily[1].temp.max;
@@ -79,7 +79,13 @@ function showWeatherData(data){
   thirdDayIconElement.src="http://openweathermap.org/img/w/" + thirdDayIcon + ".png";
   forthDayIconElement.src="http://openweathermap.org/img/w/" + forthDayIcon + ".png";
   fifthDayIconElement.src="http://openweathermap.org/img/w/" + fifthDayIcon + ".png";
-  
+  function convertTime(x){
+    var hours =new Date(x*1000).getHours();
+    var minutes =new Date(x*1000).getMinutes();
+    var seconds =new Date(x*1000).getSeconds();
+    var convertedTime=`${hours}:${minutes}:${seconds}`;
+    return convertedTime;
+  }
 
 
 }
