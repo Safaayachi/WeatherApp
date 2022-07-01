@@ -73,11 +73,11 @@ function showWeatherData(data){
   var iconurl = "http://openweathermap.org/img/w/" + currentWeatherIcon + ".png";
   console.log(iconurl);
   mainSectionIconElement.src=iconurl;
-  firstDayIconElement="http://openweathermap.org/img/w/" + firstDayIcon + ".png";
-  secondDayIconElement="http://openweathermap.org/img/w/" + secondDayIcon + ".png";
-  thirdDayIconElement="http://openweathermap.org/img/w/" + thirdDayIcon + ".png";
-  forthDayIconElement="http://openweathermap.org/img/w/" + forthDayIcon + ".png";
-  fifthDayIconElement="http://openweathermap.org/img/w/" + fifthDayIcon + ".png";
+  firstDayIconElement.src="http://openweathermap.org/img/w/" + firstDayIcon + ".png";
+  secondDayIconElement.src="http://openweathermap.org/img/w/" + secondDayIcon + ".png";
+  thirdDayIconElement.src="http://openweathermap.org/img/w/" + thirdDayIcon + ".png";
+  forthDayIconElement.src="http://openweathermap.org/img/w/" + forthDayIcon + ".png";
+  fifthDayIconElement.src="http://openweathermap.org/img/w/" + fifthDayIcon + ".png";
   
 
 
