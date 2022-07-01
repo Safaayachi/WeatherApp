@@ -3,11 +3,8 @@ const mainSectionIconElement = document.getElementById("main-section-icon");
 const temperatureElement = document.getElementById("temperature");
 const zoneElement = document.getElementById("zone");
 const descriptionElement = document.getElementById("description");
-const windIconElement = document.getElementById("wind-icon");
 const windElement = document.getElementById("wind");
-const sunriseIconElement = document.getElementById("sunrise-icon");
 const sunriseTimeElement = document.getElementById("sunrise-time");
-const sunsetIconElement = document.getElementById("sunset-icon");
 const sunsetTimeElement = document.getElementById("sunset-time");
 const firstDayIconElement = document.getElementById("firstDay-icon");
 const firstDayWeatherElement = document.getElementById("firstDay-weather");
@@ -68,10 +65,20 @@ function showWeatherData(data){
   fifthDayMaxTempElement.innerText=data.daily[5].temp.max;
   fifthDayMinTempElement.innerText=data.daily[5].temp.min;
   var currentWeatherIcon=data.current.weather[0].icon;
+  var firstDayIcon=data.daily[1].weather[0].icon;
+  var secondDayIcon=data.daily[2].weather[0].icon;
+  var thirdDayIcon=data.daily[3].weather[0].icon;
+  var forthDayIcon=data.daily[4].weather[0].icon;
+  var fifthDayIcon=data.daily[5].weather[0].icon;
   var iconurl = "http://openweathermap.org/img/w/" + currentWeatherIcon + ".png";
   console.log(iconurl);
   mainSectionIconElement.src=iconurl;
-
+  firstDayIconElement="http://openweathermap.org/img/w/" + firstDayIcon + ".png";
+  secondDayIconElement="http://openweathermap.org/img/w/" + secondDayIcon + ".png";
+  thirdDayIconElement="http://openweathermap.org/img/w/" + thirdDayIcon + ".png";
+  forthDayIconElement="http://openweathermap.org/img/w/" + forthDayIcon + ".png";
+  fifthDayIconElement="http://openweathermap.org/img/w/" + fifthDayIcon + ".png";
+  
 
 
 }
