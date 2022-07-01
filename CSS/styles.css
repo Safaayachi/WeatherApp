@@ -105,9 +105,11 @@ footer {
 }
 .max{
   display:flex;
+  flex-direction:column;
   justify-content:center;
 }
 .min{
   display:flex;
+  flex-direction:column;
   justify-content:center;
 }
