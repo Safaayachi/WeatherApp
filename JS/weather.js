@@ -47,7 +47,7 @@ function showWeatherData(data){
   zoneElement.innerText=timezone;
   descriptionElement.innerText=weatherDesc;
   windElement.innerText=wind_speed;
-  sunriseTimeElement.innerText=sunrise;
+  sunriseTimeElement.innerText=new Date(sunrise*1000).getHours();
   sunsetTimeElement.innerText=sunset;
   console.log(typeof sunrise);
   firstDayWeatherElement.innerText=data.daily[1].weather[0].main;
