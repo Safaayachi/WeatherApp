@@ -114,6 +114,11 @@ footer {
 .centeredIcon{
   display:flex;
   justify-content: center;
-  margin-bottom: 10px;
-
+  
+}
+.min{
+  gap:10.5;
+}
+.max{
+  gap:10;
 }
