@@ -49,6 +49,7 @@ function showWeatherData(data){
   windElement.innerText=wind_speed;
   sunriseTimeElement.innerText=sunrise;
   sunsetTimeElement.innerText=sunset;
+  console.log(typeof sunrise);
   firstDayWeatherElement.innerText=data.daily[1].weather[0].main;
   firstDayMaxTempElement.innerText=data.daily[1].temp.max;
   firstDayMinTempElement.innerText=data.daily[1].temp.min;
