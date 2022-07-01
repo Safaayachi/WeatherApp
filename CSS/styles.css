@@ -106,19 +106,15 @@ footer {
 #max-icon{
   width:15px;
   height:15px;
+  margin-bottom:8.5px;
 }
 #min-icon{
   width:13.5px;
   height:13.5px;
+  margin-bottom:10px;
 }
 .centeredIcon{
   display:flex;
   justify-content: center;
   
-}
-.min{
-  gap:10.5;
-}
-.max{
-  gap:10;
 }
