@@ -82,8 +82,12 @@ function showWeatherData(data){
   fifthDayIconElement.src="http://openweathermap.org/img/w/" + fifthDayIcon + ".png";
   function convertTime(x){
     var hours =new Date(x*1000).getHours();
+    if (hours>12)
+    {
+      hours=hours-12;
+    }
     var minutes =new Date(x*1000).getMinutes();
-    var convertedTime=`${hours}:${minutes} pm`;
+    var convertedTime=`${hours}:${minutes}`;
     return convertedTime;
   }
 
