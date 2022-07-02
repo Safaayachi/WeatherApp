@@ -82,6 +82,7 @@ footer {
 .footer-container h2 {
   align-self: center;
   font-size: 25px;
+  font-weight:300;
   color: #767676;
 }
 .min-max {
