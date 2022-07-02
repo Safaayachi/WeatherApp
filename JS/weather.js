@@ -52,7 +52,7 @@ function showWeatherData(data){
   sunsetTimeElement.innerText=convertTime(sunset);
   console.log(typeof sunrise);
   firstDayWeatherElement.innerText=data.daily[1].weather[0].main;
-  firstDayMaxTempElement.innerText=data.daily[1].temp.max;
+  firstDayMaxTempElement.innerText=`${data.daily[1].temp.max}°`;
   firstDayMinTempElement.innerText=data.daily[1].temp.min;
   secondDayWeatherElement.innerText=data.daily[2].weather[0].main;
   secondDayMaxTempElement.innerText=data.daily[2].temp.max;
