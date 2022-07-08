@@ -26,7 +26,7 @@ const fifthDayIconElement = document.getElementById("fifthDay-icon");
 const fifthDayWeatherElement = document.getElementById("fifthDay-weather");
 const fifthDayMaxTempElement = document.getElementById("fifthDayMax-temperature");
 const fifthDayMinTempElement = document.getElementById("fifthDayMin-temperature");
-const API_KEY = "3a61d03d191e00e1fa908edb1ff5d13c";
+const API_KEY = "f6d12f85296559143dee6e229080d414";
 
   function getWeatherData() {
     navigator.geolocation.getCurrentPosition((success) => {
